@@ -48,11 +48,6 @@ extern "C" {
  * some hidden structures. Define them here:
  */
 
-/*  EVP_PKEY_base_id introduced in 1.0.1 */
-#if OPENSSL_VERSION_NUMBER < 0x10001000L
-#define EVP_PKEY_base_id(x)		(x->type)
-#endif
-
 #if OPENSSL_VERSION_NUMBER < 0x10100000L || defined(LIBRESSL_VERSION_NUMBER)
 #define RSA_PKCS1_OpenSSL		RSA_PKCS1_SSLeay
 
